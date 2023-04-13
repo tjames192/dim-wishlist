@@ -4,6 +4,15 @@ $wishlists =
 (@'
 https://raw.githubusercontent.com/tjames192/dim-wishlist/main/wishlist.txt
 https://raw.githubusercontent.com/48klocs/dim-wish-list-sources/master/voltron.txt
+https://raw.githubusercontent.com/Geldarion/DIM-wishlist/main/wishlist.txt
+https://raw.githubusercontent.com/shauntmw/DimWishlist/main/wishlist-0330-01.txt
+https://raw.githubusercontent.com/Krymzun/dim-wishlist-source/main/know-the-god-rollfinder.txt
+https://raw.githubusercontent.com/ahojsvet/dim-private-wishlist/main/dimwishlist.txt
+https://raw.githubusercontent.com/Zephyrr29/DIM-Wishlist/main/wishlist.txt
+https://raw.githubusercontent.com/MalkToast/DIMWishList/main/TheList.txt
+https://raw.githubusercontent.com/Lucys-Guardians/DIM-Wishlist/main/Lucys_DIM_recommendations_.txt
+https://raw.githubusercontent.com/eksboxgirl/owl-wishlist/main/season_20.txt
+https://raw.githubusercontent.com/Hiplok/DIM-wishlist/main/wishlist
 https://raw.githubusercontent.com/tyhal/d2-wishlists/main/pop-wishlist.txt
 https://raw.githubusercontent.com/nilsbtr/dim_wishlist/main/wishlist.txt
 https://raw.githubusercontent.com/liminalAce/wishlists/main/Alpacas_PVE_Raid_Rolls.txt
