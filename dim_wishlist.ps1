@@ -75,7 +75,9 @@ foreach ($line in $data) {
 }
 	
 # export
-$hash.keys > wishlist.txt
+$title = 'title:This is a compiled collection of god/recommended rolls from community minds.'
+$description = 'description:'
+$title, $description, $hash.keys > wishlist.txt
 # ideally wishlist should be less than 25MB to upload to GitHub
 
 Remove-Variable -Name hash -ErrorAction SilentlyContinue
