@@ -5,7 +5,6 @@ $wishlists =
 https://raw.githubusercontent.com/tjames192/dim-wishlist/main/wishlist.txt
 https://raw.githubusercontent.com/48klocs/dim-wish-list-sources/master/voltron.txt
 https://raw.githubusercontent.com/Geldarion/DIM-wishlist/main/wishlist.txt
-https://raw.githubusercontent.com/shauntmw/DimWishlist/main/wishlist-0330-01.txt
 https://raw.githubusercontent.com/Krymzun/dim-wishlist-source/main/know-the-god-rollfinder.txt
 https://raw.githubusercontent.com/ahojsvet/dim-private-wishlist/main/dimwishlist.txt
 https://raw.githubusercontent.com/Zephyrr29/DIM-Wishlist/main/wishlist.txt
@@ -18,7 +17,6 @@ https://raw.githubusercontent.com/nilsbtr/dim_wishlist/main/wishlist.txt
 https://raw.githubusercontent.com/liminalAce/wishlists/main/Alpacas_PVE_Raid_Rolls.txt
 https://raw.githubusercontent.com/liminalAce/wishlists/main/datto_lightfall.txt
 https://raw.githubusercontent.com/liminalAce/wishlists/main/perkstokeep.txt
-https://raw.githubusercontent.com/Lucys-Guardians/DIM-Wishlist/main/Lucys_DIM_recommendations_.txt
 https://raw.githubusercontent.com/ace51689/DIM-wishlist/main/Trials-of-Osiris-Weapons.txt
 https://raw.githubusercontent.com/ace51689/DIM-wishlist/main/30th-Anniversary.txt
 https://raw.githubusercontent.com/ace51689/DIM-wishlist/main/Iron-Banner-Weapons.txt
@@ -62,7 +60,12 @@ https://raw.githubusercontent.com/Gix3612/DIM-Wishlist/main/Trace%20Rifle
 $data = [System.Text.StringBuilder]""
 
 foreach ($url in $wishlists) {
-	$results = (Invoke-RestMethod $url).Split([Environment]::NewLine)
+	try {
+		$results = (Invoke-RestMethod $url).Split([Environment]::NewLine)
+	}
+	catch {
+		write-warning "Not able to connect to $url"
+	}
 	
 	foreach ($line in $results) {
 		$null = $data.AppendLine($line)
@@ -85,7 +88,7 @@ foreach ($line in $data) {
 	
 # export
 $title = 'title:This is a compiled collection of god/recommended rolls from community minds.'
-$description = 'description:'
+$description = 'description: https://github.com/search?o=desc&q=dim+wishlist&s=updated&type=Repositories'
 $title, $description, $hash.keys > wishlist.txt
 # ideally wishlist should be less than 25MB to upload to GitHub
 
