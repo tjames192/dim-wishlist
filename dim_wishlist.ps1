@@ -24,7 +24,7 @@ https://raw.githubusercontent.com/ace51689/DIM-wishlist/main/Nightfall-Weapons.t
 https://raw.githubusercontent.com/ace51689/DIM-wishlist/main/Raid-Weapons.txt
 https://raw.githubusercontent.com/ace51689/DIM-wishlist/main/Special-Event-Weapons.txt
 https://raw.githubusercontent.com/ace51689/DIM-wishlist/main/Season-of-Arrivals.txt
-https://raw.githubusercontent.com/ace51689/DIM-wishlist/main/Season-of-Defiance
+https://raw.githubusercontent.com/ace51689/DIM-wishlist/main/Season-of-Defiance.txt
 https://raw.githubusercontent.com/ace51689/DIM-wishlist/main/Season-of-Plunder.txt
 https://raw.githubusercontent.com/ace51689/DIM-wishlist/main/Season-of-The-Lost.txt
 https://raw.githubusercontent.com/ace51689/DIM-wishlist/main/Season-of-The-Seraph.txt
@@ -64,7 +64,11 @@ foreach ($url in $wishlists) {
 		$results = (Invoke-RestMethod $url).Split([Environment]::NewLine)
 	}
 	catch {
+		$user = $url.split('/')[3]
+		$verboseMsg = "Check https://github.com/{0}?tab=repositories" -f $user
+		
 		write-warning "Not able to connect to $url"
+		write-verbose $verboseMsg -verbose
 	}
 	
 	foreach ($line in $results) {
