@@ -54,14 +54,32 @@ https://raw.githubusercontent.com/Gix3612/DIM-Wishlist/main/Special%20Grenade%20
 https://raw.githubusercontent.com/Gix3612/DIM-Wishlist/main/Submachine%20Gun
 https://raw.githubusercontent.com/Gix3612/DIM-Wishlist/main/Sword
 https://raw.githubusercontent.com/Gix3612/DIM-Wishlist/main/Trace%20Rifle
+https://raw.githubusercontent.com/Gix3612/DIM-Wishlist/main/Arc%3A%20Other
+https://raw.githubusercontent.com/Gix3612/DIM-Wishlist/main/Arc%3A%20Synergy
+https://raw.githubusercontent.com/Gix3612/DIM-Wishlist/main/Exotics
+https://raw.githubusercontent.com/Gix3612/DIM-Wishlist/main/Kinetic%3A%20Other
+https://raw.githubusercontent.com/Gix3612/DIM-Wishlist/main/Kinetic%3A%20Synergy
+https://raw.githubusercontent.com/Gix3612/DIM-Wishlist/main/PvP
+https://raw.githubusercontent.com/Gix3612/DIM-Wishlist/main/Solar%3A%20Other
+https://raw.githubusercontent.com/Gix3612/DIM-Wishlist/main/Solar%3A%20Synergy
+https://raw.githubusercontent.com/Gix3612/DIM-Wishlist/main/Stasis%3A%20Other
+https://raw.githubusercontent.com/Gix3612/DIM-Wishlist/main/Stasis%3A%20Synergy
+https://raw.githubusercontent.com/Gix3612/DIM-Wishlist/main/Strand%3A%20Other
+https://raw.githubusercontent.com/Gix3612/DIM-Wishlist/main/Strand%3A%20Synergy
+https://raw.githubusercontent.com/Gix3612/DIM-Wishlist/main/Void%3A%20Other
+https://raw.githubusercontent.com/Gix3612/DIM-Wishlist/main/Void%3A%20Synergy
+https://raw.githubusercontent.com/Gix3612/DIM-Wishlist/main/Utility%3A%20Adaptive%20Munitions
+https://raw.githubusercontent.com/Gix3612/DIM-Wishlist/main/Utility%3A%20DPS
+https://raw.githubusercontent.com/Gix3612/DIM-Wishlist/main/Utility%3A%20Osmosis
 '@).Split([Environment]::NewLine).where({$_})
 
 # load all the data
-$data = [System.Text.StringBuilder]""
+$results = [System.Text.StringBuilder]""
 
 foreach ($url in $wishlists) {
 	try {
-		$results = (Invoke-RestMethod $url).Split([Environment]::NewLine)
+		$string = Invoke-RestMethod $url
+		$null = $results.Append($string)
 	}
 	catch {
 		$user = $url.split('/')[3]
@@ -70,21 +88,16 @@ foreach ($url in $wishlists) {
 		write-warning "Not able to connect to $url"
 		write-verbose $verboseMsg -verbose
 	}
-	
-	foreach ($line in $results) {
-		$null = $data.AppendLine($line)
-	}
 }
 
-# cleanup
-$data = $data.ToString().Split([Environment]::NewLine)
-$data = $data.where({$_.startswith("dimwishlist")})
-$data = $data.where({-not $_.contains("cannot random roll")})
+$lines = $results.ToString().Split([Environment]::NewLine)
+$lines = $lines.where({$_.startswith("dimwishlist")})
+$lines = $lines.where({-not $_.contains("cannot random roll")})
 
 # remove dupes
 $hash = [ordered]@{}
 
-foreach ($line in $data) {
+foreach ($line in $lines) {
 	if (-not $hash.contains($line)) {
 		$null = $hash.add($line, $null)
 	}
@@ -96,7 +109,8 @@ $description = 'description: https://github.com/search?o=desc&q=dim+wishlist&s=u
 $title, $description, $hash.keys > wishlist.txt
 # ideally wishlist should be less than 25MB to upload to GitHub
 
+Remove-Variable -Name results -ErrorAction SilentlyContinue
+Remove-Variable -Name lines -ErrorAction SilentlyContinue
 Remove-Variable -Name hash -ErrorAction SilentlyContinue
-Remove-Variable -Name data -ErrorAction SilentlyContinue
 
 exit
