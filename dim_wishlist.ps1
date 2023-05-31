@@ -2,7 +2,7 @@
 # https://github.com/search?o=desc&q=dim+wishlist&s=updated&type=Repositories
 $wishlists =
 (@'
-https://raw.githubusercontent.com/tjames192/dim-wishlist/main/wishlist.txt
+https://raw.githubusercontent.com/tjames192/dim-wishlist/main/trashlist.txt
 https://raw.githubusercontent.com/48klocs/dim-wish-list-sources/master/voltron.txt
 https://raw.githubusercontent.com/Geldarion/DIM-wishlist/main/wishlist.txt
 https://raw.githubusercontent.com/Krymzun/dim-wishlist-source/main/know-the-god-rollfinder.txt
@@ -34,32 +34,12 @@ https://raw.githubusercontent.com/ace51689/DIM-wishlist/main/Season-of-the-Haunt
 https://raw.githubusercontent.com/ace51689/DIM-wishlist/main/Season-of-the-Hunt.txt
 https://raw.githubusercontent.com/ace51689/DIM-wishlist/main/Season-of-the-Risen.txt
 https://raw.githubusercontent.com/ace51689/DIM-wishlist/main/Season-of-the-Worthy.txt
-https://raw.githubusercontent.com/Gix3612/DIM-Wishlist/main/Exotic%20Search%20Tags
-https://raw.githubusercontent.com/Gix3612/DIM-Wishlist/main/General%20Perks
-https://raw.githubusercontent.com/Gix3612/DIM-Wishlist/main/Auto%20Rifle
-https://raw.githubusercontent.com/Gix3612/DIM-Wishlist/main/Combat%20Bow
-https://raw.githubusercontent.com/Gix3612/DIM-Wishlist/main/Fusion%20Rifle
-https://raw.githubusercontent.com/Gix3612/DIM-Wishlist/main/Glaive
-https://raw.githubusercontent.com/Gix3612/DIM-Wishlist/main/Hand%20Cannon
-https://raw.githubusercontent.com/Gix3612/DIM-Wishlist/main/Heavy%20Grenade%20Launcher
-https://raw.githubusercontent.com/Gix3612/DIM-Wishlist/main/Linear%20Fusion%20Rifle
-https://raw.githubusercontent.com/Gix3612/DIM-Wishlist/main/Machine%20Gun
-https://raw.githubusercontent.com/Gix3612/DIM-Wishlist/main/Pulse%20Rifle
-https://raw.githubusercontent.com/Gix3612/DIM-Wishlist/main/Rocket%20Launcher
-https://raw.githubusercontent.com/Gix3612/DIM-Wishlist/main/Scout%20Rifle
-https://raw.githubusercontent.com/Gix3612/DIM-Wishlist/main/Shotgun
-https://raw.githubusercontent.com/Gix3612/DIM-Wishlist/main/Sidearm
-https://raw.githubusercontent.com/Gix3612/DIM-Wishlist/main/Sniper%20Rifle
-https://raw.githubusercontent.com/Gix3612/DIM-Wishlist/main/Special%20Grenade%20Launcher
-https://raw.githubusercontent.com/Gix3612/DIM-Wishlist/main/Submachine%20Gun
-https://raw.githubusercontent.com/Gix3612/DIM-Wishlist/main/Sword
-https://raw.githubusercontent.com/Gix3612/DIM-Wishlist/main/Trace%20Rifle
-https://raw.githubusercontent.com/Gix3612/DIM-Wishlist/main/Arc%3A%20Other
-https://raw.githubusercontent.com/Gix3612/DIM-Wishlist/main/Arc%3A%20Synergy
 https://raw.githubusercontent.com/Gix3612/DIM-Wishlist/main/Exotics
+https://raw.githubusercontent.com/Gix3612/DIM-Wishlist/main/PvP
 https://raw.githubusercontent.com/Gix3612/DIM-Wishlist/main/Kinetic%3A%20Other
 https://raw.githubusercontent.com/Gix3612/DIM-Wishlist/main/Kinetic%3A%20Synergy
-https://raw.githubusercontent.com/Gix3612/DIM-Wishlist/main/PvP
+https://raw.githubusercontent.com/Gix3612/DIM-Wishlist/main/Arc%3A%20Other
+https://raw.githubusercontent.com/Gix3612/DIM-Wishlist/main/Arc%3A%20Synergy
 https://raw.githubusercontent.com/Gix3612/DIM-Wishlist/main/Solar%3A%20Other
 https://raw.githubusercontent.com/Gix3612/DIM-Wishlist/main/Solar%3A%20Synergy
 https://raw.githubusercontent.com/Gix3612/DIM-Wishlist/main/Stasis%3A%20Other
