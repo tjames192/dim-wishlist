@@ -69,10 +69,9 @@ foreach ($url in $wishlists) {
 		write-verbose $verboseMsg -verbose
 	}
 }
-
+#^dimwishlist.*\d
 $lines = $results.ToString().Split([Environment]::NewLine)
-$lines = $lines.where({$_.startswith("dimwishlist")})
-$lines = $lines.where({-not $_.contains("cannot random roll")})
+$lines = $lines.ForEach({([regex]'\bdimwishlist.+?(?=$|#)').match($_).value}).where({$_})
 
 # remove dupes
 $hash = [ordered]@{}
