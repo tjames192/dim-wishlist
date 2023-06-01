@@ -69,7 +69,7 @@ foreach ($url in $wishlists) {
 		write-verbose $verboseMsg -verbose
 	}
 }
-#^dimwishlist.*\d
+
 $lines = $results.ToString().Split([Environment]::NewLine)
 [regex]$regex = 'dimwishlist:item=-?\d+&perks=[\d+|,]*'
 $lines = $lines.ForEach({$regex.match($_).value}).where({$_})
