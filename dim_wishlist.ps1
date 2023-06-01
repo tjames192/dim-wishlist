@@ -71,7 +71,8 @@ foreach ($url in $wishlists) {
 }
 #^dimwishlist.*\d
 $lines = $results.ToString().Split([Environment]::NewLine)
-$lines = $lines.ForEach({([regex]'\bdimwishlist.+?(?=$|#|\s)').match($_).value}).where({$_})
+[regex]$regex = 'dimwishlist:item=-?\d+&perks=[\d+|,]*'
+$lines = $lines.ForEach({$regex.match($_).value}).where({$_})
 
 # remove dupes
 $hash = [ordered]@{}
