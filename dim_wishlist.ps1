@@ -86,11 +86,14 @@ foreach ($line in $lines) {
 # export
 $title = 'title:This is a compiled collection of god/recommended rolls from community minds.'
 $description = 'description: https://github.com/search?o=desc&q=dim+wishlist&s=updated&type=Repositories'
-$title, $description, $hash.keys > wishlist.txt
+
+# unix line ending + UTF ensures smaller file size 
+$unixlines = ($hash.keys -join "`n") + "`n"
+Set-Content -Path wishlist.txt -Value $unixlines -Encoding UTF8 -NoNewline
 # ideally wishlist should be less than 25MB to upload to GitHub
 
-Remove-Variable -Name results -ErrorAction SilentlyContinue
-Remove-Variable -Name lines -ErrorAction SilentlyContinue
-Remove-Variable -Name hash -ErrorAction SilentlyContinue
+# print unique rolls count
+$rollsCount = $hash.keys.count.ToString("#,##0")
+"{0} rolls in your wish list" -f $rollsCount
 
 exit
