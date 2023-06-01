@@ -71,7 +71,7 @@ foreach ($url in $wishlists) {
 }
 #^dimwishlist.*\d
 $lines = $results.ToString().Split([Environment]::NewLine)
-$lines = $lines.ForEach({([regex]'\bdimwishlist.+?(?=$|#)').match($_).value}).where({$_})
+$lines = $lines.ForEach({([regex]'\bdimwishlist.+?(?=$|#|\s)').match($_).value}).where({$_})
 
 # remove dupes
 $hash = [ordered]@{}
