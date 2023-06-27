@@ -26,9 +26,9 @@ https://raw.githubusercontent.com/ace51689/DIM-wishlist/main/Special-Event-Weapo
 https://raw.githubusercontent.com/ace51689/DIM-wishlist/main/Season-of-Arrivals.txt
 https://raw.githubusercontent.com/ace51689/DIM-wishlist/main/Season-of-Defiance.txt
 https://raw.githubusercontent.com/ace51689/DIM-wishlist/main/Season-of-Plunder.txt
-https://raw.githubusercontent.com/ace51689/DIM-wishlist/main/Season-of-The-Lost.txt
-https://raw.githubusercontent.com/ace51689/DIM-wishlist/main/Season-of-The-Seraph.txt
-https://raw.githubusercontent.com/ace51689/DIM-wishlist/main/Season-of-The-Splicer.txt
+https://raw.githubusercontent.com/ace51689/DIM-wishlist/main/Season-of-the-Lost.txt
+https://raw.githubusercontent.com/ace51689/DIM-wishlist/main/Season-of-the-Seraph.txt
+https://raw.githubusercontent.com/ace51689/DIM-wishlist/main/Season-of-the-Splicer.txt
 https://raw.githubusercontent.com/ace51689/DIM-wishlist/main/Season-of-the-Chosen.txt
 https://raw.githubusercontent.com/ace51689/DIM-wishlist/main/Season-of-the-Haunted.txt
 https://raw.githubusercontent.com/ace51689/DIM-wishlist/main/Season-of-the-Hunt.txt
