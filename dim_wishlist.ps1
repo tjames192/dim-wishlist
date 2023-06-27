@@ -95,5 +95,3 @@ Set-Content -Path wishlist.txt -Value $unixlines -Encoding UTF8 -NoNewline
 # print unique rolls count
 $rollsCount = $hash.keys.count.ToString("#,##0")
 "{0} rolls in your wish list" -f $rollsCount
-
-exit
