@@ -1,3 +1,9 @@
+#Requires -PSEdition Core
+Set-StrictMode -Version Latest
+
+# -split options
+$splitOptions = [Environment]::NewLine
+
 # raw wishlists
 # https://github.com/search?o=desc&q=dim+wishlist&s=updated&type=Repositories
 $wishlists =
@@ -51,7 +57,9 @@ https://raw.githubusercontent.com/Gix3612/DIM-Wishlist/main/Void%3A%20Synergy
 https://raw.githubusercontent.com/Gix3612/DIM-Wishlist/main/Utility%3A%20Adaptive%20Munitions
 https://raw.githubusercontent.com/Gix3612/DIM-Wishlist/main/Utility%3A%20DPS
 https://raw.githubusercontent.com/Gix3612/DIM-Wishlist/main/Utility%3A%20Osmosis
-'@).Split([Environment]::NewLine).where({$_})
+'@) -split $splitOptions
+# changed from .split to -Split
+# https://github.com/PowerShell/PowerShell/issues/12094
 
 # load all the data
 $results = [System.Text.StringBuilder]""
@@ -59,20 +67,28 @@ $results = [System.Text.StringBuilder]""
 foreach ($url in $wishlists) {
 	try {
 		$string = Invoke-RestMethod $url
-		$null = $results.Append($string)
+		$null = $results.AppendLine($string)
 	}
 	catch {
 		$user = $url.split('/')[3]
 		$verboseMsg = "Check https://github.com/{0}?tab=repositories" -f $user
+		$warningMsg = "Not able to connect to {0}" -f $url
 		
-		write-warning "Not able to connect to $url"
+		write-warning $warningMsg
 		write-verbose $verboseMsg -verbose
 	}
 }
 
-$lines = $results.ToString().Split([Environment]::NewLine)
-[regex]$regex = 'dimwishlist:item=-?\d+&perks=[\d+|,]*'
-$lines = $lines.ForEach({$regex.match($_).value}).where({$_})
+# ensure line endings with newlines
+$lines = $results.ToString() -split $splitOptions
+
+# setup regex pattern and options
+$RegexOptions = [Text.RegularExpressions.RegexOptions]::NonBacktracking
+$RegexPattern = 'dimwishlist:item=[-|\d+]*&perks=[\d+|,]*|dimwishlist:item=[-|\d+]*'
+$regex = [System.Text.RegularExpressions.Regex]::new($RegexPattern,$RegexOptions)
+
+# save matched lines starting with dimwishlist:item
+$lines = $regex.matches($lines).value
 
 # remove dupes
 $hash = [ordered]@{}
@@ -88,7 +104,7 @@ $title = 'title:This is a compiled collection of god/recommended rolls from comm
 $description = 'description: https://github.com/search?o=desc&q=dim+wishlist&s=updated&type=Repositories'
 
 # unix line ending + UTF ensures smaller file size 
-$unixlines = ($hash.keys -join "`n") + "`n"
+$unixlines = ($title, $description -join "`n") + ($hash.keys -join "`n")
 Set-Content -Path wishlist.txt -Value $unixlines -Encoding UTF8 -NoNewline
 # ideally wishlist should be less than 25MB to upload to GitHub
 
