@@ -1,1 +1,3 @@
-is:trashlist -light:>=1810 -is:shaped -perkname:"target lock" -perkname:"lead from gold" -perkname:"envious assassin" -perkname:reconstruction -perkname:"ambitious assassin"
+is:trashlist -light:pinnaclecap -is:shaped -perkname:"target lock" -perkname:"lead from gold" -perkname:"envious assassin" -perkname:reconstruction -perkname:"ambitious assassin"
+
+is:weapon -is:wishlist -is:trashlist -is:exotic -perkname:"ambitious assassin" -perkname:"target lock" -perkname:"golden tricorn" -perkname:"explosive payload"
