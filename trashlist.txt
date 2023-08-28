@@ -1,2 +1,1 @@
-#notes:light.gg rank "B/C/D/F"
-#https://d2foundry.gg/w/<item>?p=<p1>,<p2>,<p3>,<p4>
+is:trashlist is:special -perkname:"target lock" -perkname:"lead from gold" -perkname:"envious assassin" -perkname:reconstruction
