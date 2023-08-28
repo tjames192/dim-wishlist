@@ -1,1 +1,1 @@
-is:trashlist is:special -perkname:"target lock" -perkname:"lead from gold" -perkname:"envious assassin" -perkname:reconstruction
+is:trashlist -light:>=1810 -is:shaped -perkname:"target lock" -perkname:"lead from gold" -perkname:"envious assassin" -perkname:reconstruction -perkname:"ambitious assassin"
