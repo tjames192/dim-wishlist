@@ -1,5 +1,5 @@
 /* delete these weapons */
-is:weapon is:craftable -is:shaped
+is:weapon is:craftable -is:shaped -light:pinnaclecap
 
 
 /* interesting perks */
@@ -8,6 +8,7 @@ is:weapon is:craftable -is:shaped
 
 /* crafted perks are better? */
 exactperk:incandescent -is:craftable -is:exotic -is:heavy -light:pinnaclecap
+exactperk:"kinetic tremors" -is:craftable -is:exotic -is:heavy -light:pinnaclecap
 
 /* delete weapons */
 is:weapon -(is:shaped or is:exotic or is:adept) is:dupe (-perkname:"cascade point" -perkname:"chill clip" -perkname:"chain reaction" -perkname:"explosive light" -perkname:"cluster bomb" -perkname:"reservoir burst" -perkname:"eye of the storm" -perkname:dragonfly -perkname:"focused fury" -perkname:"opening shot" -perkname:incandescent -perkname:"adrenaline junkie" -perkname:"repulsor brace" -perkname:"destabilizing rounds" -perkname:"high-impact reserves" -perkname:"kill clip" -perkname:headstone -perkname:frenzy -perkname:"box breathing" -perkname:"vorpal weapon" -perkname:"kinetic tremors" -perkname:"high-caliber rounds" -perkname:"target lock" -perkname:"lead from gold" -perkname:"envious assassin" -perkname:reconstruction -perkname:"ambitious assassin" -perkname:"golden tricorn" -perkname:"collective action" -perkname:"explosive payload" -perkname:"redirection" -perkname:"hatchling" -perkname:"surrounded" -perkname:"adagio" -perkname:"timed payload" -perkname:"unstoppable force" -perkname:"voltshot" -perkname:"ensemble" -perkname:"high ground")
