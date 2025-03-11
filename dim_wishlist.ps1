@@ -11,7 +11,6 @@ $wishlists =
 https://raw.githubusercontent.com/tjames192/dim-wishlist/main/trashlist.txt
 https://raw.githubusercontent.com/48klocs/dim-wish-list-sources/master/voltron.txt
 https://raw.githubusercontent.com/Geldarion/DIM-wishlist/main/wishlist.txt
-https://raw.githubusercontent.com/Krymzun/dim-wishlist-source/main/know-the-god-rollfinder.txt
 https://raw.githubusercontent.com/ahojsvet/dim-private-wishlist/main/dimwishlist.txt
 https://raw.githubusercontent.com/Zephyrr29/DIM-Wishlist/main/wishlist.txt
 https://raw.githubusercontent.com/MalkToast/DIMWishList/main/TheList.txt
@@ -20,26 +19,6 @@ https://raw.githubusercontent.com/eksboxgirl/owl-wishlist/main/season_20.txt
 https://raw.githubusercontent.com/Hiplok/DIM-wishlist/main/wishlist
 https://raw.githubusercontent.com/tyhal/d2-wishlists/main/pop-wishlist.txt
 https://raw.githubusercontent.com/nilsbtr/dim_wishlist/main/wishlist.txt
-https://raw.githubusercontent.com/liminalAce/wishlists/main/Alpacas_PVE_Raid_Rolls.txt
-https://raw.githubusercontent.com/liminalAce/wishlists/main/datto_lightfall.txt
-https://raw.githubusercontent.com/liminalAce/wishlists/main/perkstokeep.txt
-https://raw.githubusercontent.com/ace51689/DIM-wishlist/main/Trials-of-Osiris-Weapons.txt
-https://raw.githubusercontent.com/ace51689/DIM-wishlist/main/30th-Anniversary.txt
-https://raw.githubusercontent.com/ace51689/DIM-wishlist/main/Iron-Banner-Weapons.txt
-https://raw.githubusercontent.com/ace51689/DIM-wishlist/main/Nightfall-Weapons.txt
-https://raw.githubusercontent.com/ace51689/DIM-wishlist/main/Raid-Weapons.txt
-https://raw.githubusercontent.com/ace51689/DIM-wishlist/main/Special-Event-Weapons.txt
-https://raw.githubusercontent.com/ace51689/DIM-wishlist/main/Season-of-Arrivals.txt
-https://raw.githubusercontent.com/ace51689/DIM-wishlist/main/Season-of-Defiance.txt
-https://raw.githubusercontent.com/ace51689/DIM-wishlist/main/Season-of-Plunder.txt
-https://raw.githubusercontent.com/ace51689/DIM-wishlist/main/Season-of-the-Lost.txt
-https://raw.githubusercontent.com/ace51689/DIM-wishlist/main/Season-of-the-Seraph.txt
-https://raw.githubusercontent.com/ace51689/DIM-wishlist/main/Season-of-the-Splicer.txt
-https://raw.githubusercontent.com/ace51689/DIM-wishlist/main/Season-of-the-Chosen.txt
-https://raw.githubusercontent.com/ace51689/DIM-wishlist/main/Season-of-the-Haunted.txt
-https://raw.githubusercontent.com/ace51689/DIM-wishlist/main/Season-of-the-Hunt.txt
-https://raw.githubusercontent.com/ace51689/DIM-wishlist/main/Season-of-the-Risen.txt
-https://raw.githubusercontent.com/ace51689/DIM-wishlist/main/Season-of-the-Worthy.txt
 https://raw.githubusercontent.com/Gix3612/DIM-Wishlist/main/Exotics
 https://raw.githubusercontent.com/Gix3612/DIM-Wishlist/main/PvP
 https://raw.githubusercontent.com/Gix3612/DIM-Wishlist/main/Kinetic%3A%20Other
@@ -57,6 +36,15 @@ https://raw.githubusercontent.com/Gix3612/DIM-Wishlist/main/Void%3A%20Synergy
 https://raw.githubusercontent.com/Gix3612/DIM-Wishlist/main/Utility%3A%20Adaptive%20Munitions
 https://raw.githubusercontent.com/Gix3612/DIM-Wishlist/main/Utility%3A%20DPS
 https://raw.githubusercontent.com/Gix3612/DIM-Wishlist/main/Utility%3A%20Osmosis
+https://raw.githubusercontent.com/ace51689/DIM-wishlist/refs/heads/main/Crucible.txt
+https://raw.githubusercontent.com/ace51689/DIM-wishlist/refs/heads/main/Raids-and-Dungeons.txt
+https://raw.githubusercontent.com/ace51689/DIM-wishlist/refs/heads/main/Special-Events.txt
+https://raw.githubusercontent.com/ace51689/DIM-wishlist/refs/heads/main/Vanguard-and-Gambit.txt
+https://raw.githubusercontent.com/ace51689/DIM-wishlist/refs/heads/main/Y3-Shadowkeep.txt
+https://raw.githubusercontent.com/ace51689/DIM-wishlist/refs/heads/main/Y4-Beyond-Light.txt
+https://raw.githubusercontent.com/ace51689/DIM-wishlist/refs/heads/main/Y5-The-Witch-Queen.txt
+https://raw.githubusercontent.com/ace51689/DIM-wishlist/refs/heads/main/Y6-Lightfall.txt
+https://raw.githubusercontent.com/ace51689/DIM-wishlist/refs/heads/main/Y7-The-Final-Shape.txt
 '@) -split $splitOptions
 # changed from .split to -Split
 # https://github.com/PowerShell/PowerShell/issues/12094
